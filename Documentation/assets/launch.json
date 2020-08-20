@@ -1,0 +1,98 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "insights-service: debugging",
+            "protocol": "inspector",
+            "args": [
+                "${workspaceFolder}/src/main.ts"
+            ],
+            "runtimeArgs": [
+                "--nolazy",
+                "-r",
+                "ts-node/register",
+                "-r",
+                "tsconfig-paths/register",
+            ],
+            "env": {
+                "TS_NODE_TRANSPILE_ONLY": "true",
+                "NODE_ENV_PATH": "C:/dev/projects/consortiuminsights/node_config/",
+            },
+            "sourceMaps": true,
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "insights-service: jest",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+            "runtimeArgs": [
+                "--nolazy",
+                "-r",
+                "ts-node/register",
+                "-r",
+                "tsconfig-paths/register",
+            ],
+            "args": [
+                "--runInBand",
+                "--config",
+                "${workspaceRoot}/test/jest-e2e.json"
+            ],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "TS_NODE_TRANSPILE_ONLY": "true",
+                "NODE_ENV_PATH": "C:/dev/projects/consortiuminsights/node_config/",
+            },
+            "sourceMaps": true,
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "protocol": "inspector",
+            "args": [
+                "${file}"
+            ],
+            "runtimeArgs": [
+                "--nolazy",
+                "-r",
+                "ts-node/register",
+                "-r",
+                "tsconfig-paths/register",
+            ],
+            "env": {
+                "TS_NODE_TRANSPILE_ONLY": "true",
+            },
+            "sourceMaps": true,
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "insights-service: linux debugging",
+            "protocol": "inspector",
+            "args": [
+                "${workspaceFolder}/src/main.ts"
+            ],
+            "runtimeArgs": [
+                "--nolazy",
+                "-r",
+                "ts-node/register",
+                "-r",
+                "tsconfig-paths/register",
+            ],
+            "env": {
+                "TS_NODE_TRANSPILE_ONLY": "true",
+                "NODE_ENV_PATH": "/mnt/c/dev/projects/consortiuminsights/node_config/",
+            },
+            "sourceMaps": true,
+            "console": "integratedTerminal"
+        }
+    ]
+}
